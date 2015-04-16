@@ -1,0 +1,10 @@
+- at the top of the server.js file we are doing this:
+  - var express = require('express')
+  - I get it sort of...but what exactly is happening here?
+  - Is 'express' a javascript module, and now are var express contains all of
+    the code?
+- What creates the posts table, the model/post.js file? At the end of ch. 4 we are able to post to the database through curl. Then we
+  can type:
+  - mongo social
+  - db.posts.find() 
+
