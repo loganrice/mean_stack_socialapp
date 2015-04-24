@@ -5,22 +5,22 @@ app.controller('PostsCtrl', function ($scope, PostsSvc) {
     if ($scope.postBody) {
       PostsSvc.create({
         username: 'dickeyxxx',
-        body: $scope.postBody
+        body:     $scope.postBody
       })
       .success(function (post) {
         $scope.posts.unshift(post)
-          $scope.postBody = null
+        $scope.postBody = null
       })
     }
   }
 
-  PostSvc.fetch()
+  PostsSvc.fetch()
   .success(function (posts) {
     $scope.posts = posts
   })
 })
 
-app.service('PostSvc', function ($http) {
+app.service('PostsSvc', function ($http) {
   this.fetch = function () {
     return $http.get('/api/posts')
   }
