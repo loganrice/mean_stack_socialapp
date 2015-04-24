@@ -1,4 +1,5 @@
 angular.module('app')
+console.error('error')
 .service('PostSvc', function ($http) {
   this.fetch = function () {
     return $http.get('/api/posts')
